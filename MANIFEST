@@ -1,0 +1,8 @@
+Changes
+lib/OSType.pm
+Makefile.PL
+MANIFEST
+MANIFEST.SKIP
+README
+t/OSType.t
+META.yml                                 Module meta-data (added by MakeMaker)
