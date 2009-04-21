@@ -2,7 +2,7 @@ package OSType;
 use strict;
 use warnings;
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 require Exporter;
 our @ISA = qw(Exporter);
@@ -77,19 +77,20 @@ my %OSFAMILIES = (
 
 sub os_type {
   my ($os) = @_;
-  $os ||= $^O;
+  $os = $^O unless defined $os;
   return $OSTYPES{ $os } || q{};
 }
 
 sub is_os_type {
   my ($type, $os) = @_;
   return unless $type;
+  $os = $^O unless defined $os;
   return os_type($os) eq $type;
 }
 
 sub os_family {
   my ($family) = @_;
-  return unless exists $OSFAMILIES{$family};
+  return unless defined $family && exists $OSFAMILIES{$family};
   my @names = @{ $OSFAMILIES{$family} };
   return wantarray ? @names : $names[0];
 }
@@ -98,7 +99,7 @@ sub is_os_family {
   my ($family, $os) = @_;
   my @family = os_family($family);
   return unless @family;
-  $os ||= $^O;
+  $os = $^O unless defined $os;
   return scalar grep { $_ eq $os } @family;
 }
 
