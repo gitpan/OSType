@@ -1,8 +1,13 @@
 Changes
-lib/OSType.pm
-Makefile.PL
+LICENSE
 MANIFEST
-MANIFEST.SKIP
+META.yml
+Makefile.PL
 README
+dist.ini
+lib/OSType.pm
+t/00-compile.t
 t/OSType.t
-META.yml                                 Module meta-data (added by MakeMaker)
+xt/release/distmeta.t
+xt/release/pod-coverage.t
+xt/release/pod-syntax.t

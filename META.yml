@@ -1,21 +1,33 @@
---- #YAML:1.0
-name:               OSType
-version:            0.003
-abstract:           Map operating system names to generic types or families
+---
+abstract: 'Map operating system names to generic types or families'
 author:
-    - David Golden <dagolden@cpan.org>
-license:            perl
-distribution_type:  module
-configure_requires:
-    ExtUtils::MakeMaker:  0
+  - 'David Golden <dagolden@cpan.org>'
 build_requires:
-    ExtUtils::MakeMaker:  0
-requires:  {}
-no_index:
-    directory:
-        - t
-        - inc
-generated_by:       ExtUtils::MakeMaker version 6.50
+  File::Find: 0
+  File::Temp: 0
+  Test::More: 0
+  constant: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.31
+generated_by: 'Dist::Zilla version 2.101241'
+license: perl
 meta-spec:
-    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
-    version:  1.4
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: OSType
+no_index:
+  directory:
+    - t
+    - xt
+    - examples
+    - corpus
+provides:
+  OSType:
+    file: lib/OSType.pm
+    version: 0.004
+recommends: {}
+requires:
+  Exporter: 0
+resources:
+  repository: http://github.com/dagolden/ostype
+version: 0.004

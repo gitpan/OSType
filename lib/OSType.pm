@@ -1,8 +1,19 @@
-package OSType;
+# 
+# This file is part of OSType
+# 
+# This software is copyright (c) 2010 by David Golden.
+# 
+# This is free software; you can redistribute it and/or modify it under
+# the same terms as the Perl 5 programming language system itself.
+# 
 use strict;
 use warnings;
+package OSType;
+BEGIN {
+  $OSType::VERSION = '0.004';
+}
+# ABSTRACT: Map operating system names to generic types or families
 
-our $VERSION = '0.003';
 
 require Exporter;
 our @ISA = qw(Exporter);
@@ -17,6 +28,7 @@ our @EXPORT_OK = @{ $EXPORT_TAGS{all} };
 my %OSTYPES = qw(
   aix         Unix
   bsdos       Unix
+  beos        Unix
   dgux        Unix
   dragonfly   Unix
   dynixptx    Unix
@@ -104,11 +116,17 @@ sub is_os_family {
 }
 
 1;
-__END__
+
+
+=pod
 
 =head1 NAME
 
 OSType - Map operating system names to generic types or families
+
+=head1 VERSION
+
+version 0.004
 
 =head1 SYNOPSIS
 
@@ -249,15 +267,18 @@ L<Devel::CheckOS>
 
 =head1 AUTHOR
 
-David Golden, E<lt>dagolden@cpan.orgE<gt>
+  David Golden <dagolden@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2009 by David Golden
+This software is copyright (c) 2010 by David Golden.
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.10.0 or,
-at your option, any later version of Perl 5 you may have available.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
+
+
+__END__
+
 

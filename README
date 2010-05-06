@@ -1,6 +1,9 @@
 NAME
     OSType - Map operating system names to generic types or families
 
+VERSION
+    version 0.004
+
 SYNOPSIS
       use OSType ':all';
 
@@ -103,12 +106,11 @@ SEE ALSO
     *   Devel::CheckOS
 
 AUTHOR
-    David Golden, <dagolden@cpan.org>
+      David Golden <dagolden@cpan.org>
 
 COPYRIGHT AND LICENSE
-    Copyright (C) 2009 by David Golden
+    This software is copyright (c) 2010 by David Golden.
 
-    This library is free software; you can redistribute it and/or modify it
-    under the same terms as Perl itself, either Perl version 5.10.0 or, at
-    your option, any later version of Perl 5 you may have available.
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
 
